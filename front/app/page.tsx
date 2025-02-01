@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import {getEquipos, IEquipo} from "../helpers/equiposHelpers"
+import Enconstrucion from "@/components/enconstrucion/Enconstrucion";
 
 
 export default function Home() {
@@ -17,14 +18,7 @@ export default function Home() {
 
   return (
     <>
-      {equipos && equipos.map((equipo) => {
-        
-        return(
-          <div key={equipo._id}>
-            <h1>{equipo.marca}</h1>
-          </div>
-        )
-      })}
+      <Enconstrucion/>
     </>
   );
 }
