@@ -18,7 +18,6 @@ export default function Home() {
   return (
     <>
       {equipos && equipos.map((equipo) => {
-        console.log(equipo)
         
         return(
           <div key={equipo._id}>
