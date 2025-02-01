@@ -7,3 +7,7 @@ body{
   grid-template-rows: auto 1fr auto;
   min-height: 100dvh;
 }
+
+*{
+  --primaryColor: rgb(14, 250, 45);
+}

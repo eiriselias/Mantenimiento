@@ -16,13 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="bg-blue-600">
+        <header className="bg-primaryColor">
           <NavBar/>
         </header>
         <main>
           {children}
         </main>
-        <footer className="bg-red-500">
+        <footer>
             <Footer/>
         </footer>
       </body>
