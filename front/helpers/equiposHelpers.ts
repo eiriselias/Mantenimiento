@@ -9,7 +9,38 @@ export interface IEquipo{
 }
 
 export const getEquipos = async() => {
-    const equipos = await client.fetch('*[_type == "equipo"]')
+    const equipos = await client.fetch(`*[_type == "equipo"]{
+  codigoInterno,
+    marca,
+    tipo -> {name},
+    modelo,
+    serie,
+    capacidad,
+    serieMotor,
+    cilindraje,
+    codigoChasis,
+    aceiteHidraulico -> {
+      tipo -> {tipo} , referencia
+    },
+    transmision,
+    filtroAceite,
+    filtroAcpm,
+    filtroAire,
+    filtroCaja,
+    filtroAgua,
+    imagen,
+  motor -> {
+    name,
+    cilindraje,
+    capacidad,
+    serie,
+    tipoAceite -> {
+        tipo -> {
+            tipo
+        }
+    }
+  }
+}`)
     return equipos
 }
 
