@@ -1,3 +1,4 @@
+import { urlFor } from '@/client'
 import { IEquipo } from '@/helpers/equiposHelpers'
 import React from 'react'
 
@@ -13,7 +14,9 @@ const Card = ({equipos}: CardProps) => {
         return(
             <div className='bg-white w-80 rounded-lg flex flex-col items-center shadow-xl border-solid border-2' key={equipo._id}>
                 <div className='p-4 font-bold text-2xl'><h1>{equipo.marca}</h1></div>
-                <div className='w-full h-48 bg-slate-400'></div>
+                <div className='w-full h-48 bg-slate-400'>
+                    <img src={urlFor(equipo.imagen).url()} alt={equipo.modelo} className="w-full h-full"/>
+                </div>
                 <div className='p-4 flex flex-col items-center'>
                     <p>Modelo: <strong>{equipo.modelo}</strong> </p>
                     <p>Capadidad: <strong>{equipo.capacidad} toneladas</strong></p> 

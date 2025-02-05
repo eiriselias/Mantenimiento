@@ -8,6 +8,13 @@ export interface IEquipo{
       name:string
     },
     capacidad: number,
+    imagen: {
+      _type: 'image';
+      asset: {
+        _ref: string;
+        _type: 'reference';
+      };
+    };
 }
 
 export const getEquipos = async() => {
