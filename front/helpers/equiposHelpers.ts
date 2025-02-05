@@ -4,7 +4,9 @@ export interface IEquipo{
     _id: string,
     marca: string,
     modelo: string, 
-    type: string,
+    tipo: {
+      name:string
+    },
     capacidad: number,
 }
 
